@@ -15,5 +15,11 @@
         vm.name = data.name;
       });
     };
+
+    vm.loadExpressCall = function() {
+      SampleService.makeExpressCall().then(function(data) {
+        vm.name = data.message;
+      });
+    };
   }
 }());

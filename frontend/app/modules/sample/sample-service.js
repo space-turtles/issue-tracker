@@ -10,6 +10,12 @@
         return response.data;
       });
     };
+
+    service.makeExpressCall = function() {
+      return $http.get('/api').then(function(response) {
+        return response.data;
+      });
+    };
     return service;
   }
 })();

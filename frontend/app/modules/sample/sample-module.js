@@ -6,7 +6,7 @@
 
     function Routes($stateProvider) {
       $stateProvider.state('issue-tracker.sample', {
-          url: '/sample',
+          url: '/',
           templateUrl: 'sample.html',
           controller: 'SampleController',
           controllerAs: 'vm'
