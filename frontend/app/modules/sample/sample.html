@@ -1,0 +1,6 @@
+<div>
+  <label>Name</label>
+  <input data-ng-model="vm.name" /><br/>
+  <sample-directive data-ng-if="vm.isShowingGreeting" data-name="vm.name"></sample-directive>
+  <button data-ng-click="vm.isShowingGreeting = !vm.isShowingGreeting">{{ vm.isShowingGreeting ? 'Hide' : 'Show' }}  Greeting</button>
+</div>
