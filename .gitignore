@@ -1,9 +1,11 @@
 .idea
 public
 prod_dist
-src/app/modules/**/*.min.js
-src/app/*.min.js
+frontend/app/modules/**/*.min.js
+frontend/app/*.min.js
 node_modules
 grunt_temp
 .DS_Store
 bower_components
+*.swp
+*.swo
