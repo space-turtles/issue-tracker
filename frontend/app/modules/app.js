@@ -1,4 +1,8 @@
 (function () {
+  'use strict';
+   //[JG]: Vars filled in by build tool.
+  var apiHost = '{!api_host!}';
+
   angular
     .module('issue-tracker',
     [
@@ -6,6 +10,7 @@
         'issue-tracker.sample'
     ])
     .constant('baseImagePath', '/images/')
+    .constant('config', {apiHost: apiHost})
     .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
       $urlRouterProvider.otherwise('/');
       $locationProvider.html5Mode(true);

@@ -31,3 +31,8 @@ Dependencies:
 * bodyparser so we can access request bodies with `req.body`
 * express-validator will provide basic input validation once we set up actual routes
 
+
+# Suggested development workflow:
+* In the `frontend` directory, `brunch watch` without the `--server`
+* In the `backend` directory, `npm start`
+* Go to `localhost:8080` to see your changes.

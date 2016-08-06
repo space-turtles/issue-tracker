@@ -2,7 +2,7 @@
   "name": "issue-tracker",
   "scripts": {
     "IMPORTANT_DO_NOT_IGNORE": "If you remove --production, the source code will not be minified.",
-    "start": "./node_modules/.bin/bower install && ./node_modules/.bin/brunch build --production && node server.js"
+    "start": "./node_modules/.bin/bower install && ./node_modules/.bin/brunch build --production"
   },
   "engines": {
     "node": "5.2.0"

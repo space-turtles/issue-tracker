@@ -5,9 +5,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const validator = require('express-validator');
 const app = express();
+const frontend = express();
 
 // Middleware
-app.use(bodyParser.urlencoded({ extended: true })); 
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(validator());
 
@@ -27,9 +28,21 @@ router.get('/', (req, res) => {
     message: 'It\'s alive!!'
   });
 });
-
 app.use('/api', router);
+
+
+
+
+app.use('/', express.static('public'));
+app.get('/*', (req, res, next) => {
+  //[JG]: Anguar routes are configured to not be hash prefixed.
+  if (req.url.indexOf('/api') === 0) {
+    next();
+  }
+  else {
+    res.sendFile(__dirname + '/public/index.html');
+  }
+});
 
 app.listen(port);
 console.log('Now listening on port', port);
-

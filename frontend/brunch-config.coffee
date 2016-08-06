@@ -1,4 +1,7 @@
+host = "http://localhost:8080"
 exports.config =
+  paths:
+    public: '../backend/public'
   modules:
     definition: false
     wrapper: false
@@ -9,6 +12,8 @@ exports.config =
     replace:
       encoding: 'utf8'
       log: true
+      mappings:
+        'api_host': host
       paths: [
         'public/js/app.js'
       ]

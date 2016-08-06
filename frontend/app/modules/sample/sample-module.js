@@ -6,8 +6,13 @@
 
     function Routes($stateProvider) {
       $stateProvider.state('issue-tracker.sample', {
-          url: '/',
+          url: '/sample',
           templateUrl: 'sample.html',
+          controller: 'SampleController',
+          controllerAs: 'vm'
+      }).state('issue-tracker.sample-2', {
+          url: '/sample-2',
+          templateUrl: 'sample-2.html',
           controller: 'SampleController',
           controllerAs: 'vm'
       });
