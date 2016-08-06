@@ -4,6 +4,8 @@ Skeleton app.
 ### Setup instructions
 * Ensure you have `npm`.
 * Ensure you have `bower`.
+* `npm install`
+* `bower install`
 * Ensure you have [`brunch`](http://brunch.io) (`npm install -g brunch`)
 * `brunch watch --server` will run the dev server on port `3333`.
 * Backend coming soon!
