@@ -1,5 +1,8 @@
 'use strict';
 
+const welcomeMessage = require('./welcome-message');
+welcomeMessage.log();
+
 // Initial set up, loading dependencies
 const express = require('express');
 const bodyParser = require('body-parser');
