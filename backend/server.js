@@ -5,7 +5,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const validator = require('express-validator');
 const app = express();
-const frontend = express();
+const db = require('./db');
+
+db.initialize();
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -31,8 +33,6 @@ router.get('/', (req, res) => {
 app.use('/api', router);
 
 
-
-
 app.use('/', express.static('public'));
 app.get('/*', (req, res, next) => {
   //[JG]: Anguar routes are configured to not be hash prefixed.
@@ -46,3 +46,4 @@ app.get('/*', (req, res, next) => {
 
 app.listen(port);
 console.log('Now listening on port', port);
+
