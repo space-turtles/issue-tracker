@@ -1,3 +1,4 @@
+'use strict';
 const firebase = require('firebase');
 const firebaseConfig = require('./firebase-config');
 const initializedApp = firebase.initializeApp(firebaseConfig.apiKey);
@@ -12,7 +13,7 @@ exports.initialize = function() {
 
 exports.createProject = function(name, issues, res) {
   let projectSlug = slug(name);
-  
+
   db.ref('projects/' + projectSlug).set({
     name: name,
     issues: issues
@@ -36,4 +37,3 @@ exports.getProjects = function(res) {
       res.json(projects);
     });
 }
-
