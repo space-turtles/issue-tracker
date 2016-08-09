@@ -46,12 +46,12 @@ router.route('/projects')
       const name = req.body.name;
       const issues = req.body.issues || [];
 
-			db.createProject(req.body.name, req.body.issues);
-
-      res.json({
-        message: `Project ${req.body.name} created.`
-      })
+			db.createProject(req.body.name, req.body.issues, res);
 		}
+  })
+//GET /api/projects - returns a JSON object with all the current projects in the db
+  .get((req, res) => {
+    db.getProjects(res);
   });
 
 

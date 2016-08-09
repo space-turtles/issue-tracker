@@ -10,7 +10,7 @@ exports.initialize = function() {
   return initializedApp;
 }
 
-exports.createProject = function(name, issues) {
+exports.createProject = function(name, issues, res) {
   let projectSlug = slug(name);
   
   db.ref('projects/' + projectSlug).set({
@@ -18,9 +18,22 @@ exports.createProject = function(name, issues) {
     issues: issues
   })
   .then(() => {
-    console.log(`Project ${name} created at /api/projects/${projectSlug}.`);
+    let successMessage = `Project ${name} created at /api/projects/${projectSlug}.`;
+    console.log(successMessage);
+      res.json({
+        message: successMessage
+      })
   });
 }
 
-
+exports.getProjects = function(res) {
+  let projects = {};
+  db.ref('projects').once('value')
+    .then(snap => {
+      snap.forEach(childSnap => {
+        projects[childSnap.key] = childSnap.val();
+      });
+      res.json(projects);
+    });
+}
 
