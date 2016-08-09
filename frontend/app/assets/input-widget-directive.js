@@ -1,11 +1,11 @@
 (function() {
   'use-strict';
   angular
-    .module('issue-tracker')
+    .module('input-widget')
     .directive('inputWidgetDirective', function(){
       return {
         restrict: 'E',
-        templateUrl: 'input-widget-directive.html'
+        templateUrl: 'asserts/input-widget-directive.html'
       };
     })
 });
