@@ -5,7 +5,7 @@
     .directive('inputWidgetDirective', function(){
       return {
         restrict: 'E',
-        templateUrl: 'asserts/input-widget-directive.html'
+        templateUrl: 'assets/input-widget-directive.html'
       };
     })
 });
