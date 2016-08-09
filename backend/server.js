@@ -26,14 +26,33 @@ router.use((req, res, next) => {
   next();
 });
 
-// Routes, this is just to show it works, we should end up with
-// routes in their own directory when we start actually writing them
 router.get('/', (req, res) => {
   res.json({
     message: 'It\'s alive!!'
   });
 });
 app.use('/api', router);
+
+router.route('/projects')
+//POST /api/projects - validates and creates a new project
+	.post((req, res) => {
+    req.checkBody("name", "Invalid value for name. Please enter a valid ASCII string.").notEmpty().isAscii();
+    let errors = req.validationErrors();
+    if (errors) {
+      res.send(errors);
+      return;
+    } 
+    else { 
+      const name = req.body.name;
+      const issues = req.body.issues || [];
+
+			db.createProject(req.body.name, req.body.issues);
+
+      res.json({
+        message: `Project ${req.body.name} created.`
+      })
+		}
+  });
 
 
 app.use('/', express.static('public'));
