@@ -5,7 +5,7 @@
     .directive('input-widget', function(){
       return {
         restrict: 'E',
-        templateUrl: 'assets/input-widget-directive.html'
+        templateUrl: 'modules/components/input-widget-directive.html'
       };
     })
-});
+})();
