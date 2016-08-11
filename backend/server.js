@@ -59,6 +59,7 @@ router.route('/projects/:project')
   .get((req, res) => {
     db.readProject(req.params.project, res);
   })
+//DELETE /api/projects/:project - deletes this project
   .delete((req, res) => {
     db.deleteProject(req.params.project, res);
   });
