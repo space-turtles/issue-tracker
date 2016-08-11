@@ -1,1 +1,2 @@
-angular.module('input-widget', []);
+angular
+    .module('input-widget', []);
