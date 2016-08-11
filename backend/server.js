@@ -54,6 +54,15 @@ router.route('/projects')
     db.getProjects(res);
   });
 
+router.route('/projects/:project')
+//GET /api/projects/:project - returns a json object with info on this project
+  .get((req, res) => {
+    db.readProject(req.params.project, res);
+  })
+  .delete((req, res) => {
+    db.deleteProject(req.params.project, res);
+  });
+
 
 app.use('/', express.static('public'));
 app.get('/*', (req, res, next) => {

@@ -14,7 +14,7 @@ exports.initialize = function() {
 exports.createProject = function(name, issues, res) {
   let projectSlug = slug(name);
 
-  db.ref('projects/' + projectSlug).set({
+  db.ref(`projects/${projectSlug}`).set({
     name: name,
     issues: issues
   })
@@ -24,6 +24,26 @@ exports.createProject = function(name, issues, res) {
       res.json({
         message: successMessage
       })
+  });
+}
+
+exports.readProject = function(projectSlug, res) {
+  let project = {};
+  db.ref('projects/' + projectSlug).once('value')
+    .then(snap => {
+      project = snap.val();
+      res.json(project);
+    });
+}
+
+exports.updateProject = function(projectSlug, updates, res) {
+  return false;
+}
+
+exports.deleteProject = function(projectSlug, res) {
+  db.ref('projects').child(projectSlug).remove()
+  .then(() => {
+    res.json(`Project ${projectSlug} removed.`);
   });
 }
 
