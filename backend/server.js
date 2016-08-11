@@ -59,6 +59,14 @@ router.route('/projects/:project')
   .get((req, res) => {
     db.readProject(req.params.project, res);
   })
+//PUT /api/projects/:project - updates the project's fields, slug is static for now
+  .put((req, res) => {
+    const updates = {
+      issues: req.body.issues,
+      name: req.body.name
+    }
+    db.updateProject(req.params.project, updates, res);
+  })
 //DELETE /api/projects/:project - deletes this project
   .delete((req, res) => {
     db.deleteProject(req.params.project, res);

@@ -37,7 +37,10 @@ exports.readProject = function(projectSlug, res) {
 }
 
 exports.updateProject = function(projectSlug, updates, res) {
-  return false;
+  db.ref('projects').child(projectSlug).update(updates)
+  .then(() => {
+    res.json(`Project ${projectSlug} updated`);
+  });
 }
 
 exports.deleteProject = function(projectSlug, res) {
