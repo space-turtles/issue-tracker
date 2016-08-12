@@ -16,7 +16,8 @@
         controllerAs: 'vm',
         bindToController: true,
         scope: {
-          label: '='
+          label: '=',
+          model: '='
         }
       };
     }
