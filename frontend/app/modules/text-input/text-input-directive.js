@@ -1,8 +1,8 @@
 (function() {
   'use-strict';
   angular
-    .module('issue-input')
-    .directive('issueInput', Directive);
+    .module('text-input')
+    .directive('textInput', Directive);
     
     function Directive(){
       function Controller() {
@@ -11,7 +11,7 @@
 
       return {
         restrict: 'E',
-        templateUrl: 'issue-input-directive.html',
+        templateUrl: 'text-input-directive.html',
         controller: [Controller],
         controllerAs: 'vm',
         bindToController: true,
