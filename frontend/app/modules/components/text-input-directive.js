@@ -1,7 +1,7 @@
 (function() {
   'use-strict';
   angular
-    .module('text-input')
+    .module('components')
     .directive('textInput', Directive);
     
     function Directive(){

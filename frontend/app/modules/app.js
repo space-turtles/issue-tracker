@@ -8,7 +8,7 @@
     [
         'ui.router',
         'issue-tracker.sample',
-        'text-input'
+        'components'
     ])
     .constant('baseImagePath', '/images/')
     .constant('config', {apiHost: apiHost})
