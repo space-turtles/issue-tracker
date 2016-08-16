@@ -1,6 +1,8 @@
-<div ng-repeat="project in projects">
-    <h3>{{project.name}}</h3>
-    <ul>
-        <li ng-repeat="issue in project.issues">{{issue}}</li>
+<div ng-controller="viewController">
+    <ul ng-repeat="project in projects">
+        <h3>{{project.name}}</h3>
+        <ul>
+            <li ng-repeat="issue in project.issues">{{issue}}</li>
+        </ul>
     </ul>
 </div>
