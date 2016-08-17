@@ -4,7 +4,7 @@
     .module('components')
     .controller('viewController', ['ViewService', Controller]);
     
-  function Controller() {
+  function Controller(ViewService) {
     var vm = this;
   
     vm.loadProjectCall = function() {
