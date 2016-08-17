@@ -12,5 +12,7 @@
         return data;
       });
     }
+    var issues = vm.loadProjectCall();
+    console.log(issues);
   };
 })();
