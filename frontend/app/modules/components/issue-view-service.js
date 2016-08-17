@@ -8,9 +8,9 @@
         
         service.makeCall = function() {
           return $http.get('/api/projects').then(function(response) {
+              console.log('response is:', response);
               return response.data;
           });
         };
-        return service;
     }
 })();

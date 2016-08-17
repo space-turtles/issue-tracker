@@ -6,13 +6,13 @@
     
   function Controller(ViewService) {
     var vm = this;
-  
+
     vm.loadProjectCall = function() {
       ViewService.makeCall().then(function(data) {
-        return data;
+        vm.issues = data;
       });
     }
-    var issues = vm.loadProjectCall();
-    console.log(issues);
+    vm.loadProjectCall();
+    console.log(vm.issues);
   };
 })();

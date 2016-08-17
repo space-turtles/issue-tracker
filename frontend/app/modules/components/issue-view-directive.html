@@ -1,5 +1,5 @@
 <div ng-controller="viewController">
-    <ul ng-repeat="project in projects">
+    <ul ng-repeat="project in vm.issues">
         <h3>{{project.name}}</h3>
         <ul>
             <li ng-repeat="issue in project.issues">{{issue}}</li>
