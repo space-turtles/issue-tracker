@@ -8,7 +8,7 @@
     [
         'ui.router',
         'issue-tracker.sample',
-				'issue-tracker.Create-issue'
+				'issue-tracker.Create'
     ])
     .constant('baseImagePath', '/images/')
     .constant('config', {apiHost: apiHost})
