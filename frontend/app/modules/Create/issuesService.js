@@ -5,17 +5,13 @@
     .service('IssuesService', ['$http', Service]);
 
   function Service($http) {
-	var issues = {
-		name: "", 
-		description: ""
-	};
+		var service = this;
+		service.issuesList = []; 
+	  service.add = function (issue){
+		service.issuesList.push({id: service.issuesList.length, name: issue.name, description: issue.description});
 		
-	issues.list = []; 
-	
-	issues.add = function (issue){
-		issues.list.push({id: issues.list.length, name: name, description: description});
 	  };
-	};
-	return issues;
+	
+	}
 
-});
+}());
