@@ -2,7 +2,7 @@
 	
 	angular
     .module('issue-tracker.Create')
-    .service('IssuesService', ['$http', Service]);
+    .service('issues-service', ['$http', Service]);
 
   function Service($http) {
 		var service = this;
