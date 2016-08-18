@@ -5,16 +5,16 @@
     .config(['$stateProvider', Routes]);
 
     function Routes($stateProvider) {
-      $stateProvider.state('issue-tracker.Create', {
+      $stateProvider.state('issue-tracker.CreateForm', {
           url: '/create',
           templateUrl: 'CreateForm.html',
-          controller: 'PostCtlr',
-          controllerAs: 'post'
-      }).state('issue-tracker.List', {
+          controller: 'PostController',
+          controllerAs: 'vm'
+      }).state('issue-tracker.IssuesList', {
           url: '/List',
           templateUrl: 'IssuesList.html',
-          controller: 'ListCtlr',
-          controllerAs: 'list'
+          controller: 'ListController',
+          controllerAs: 'vm'
       });
     }
 })();

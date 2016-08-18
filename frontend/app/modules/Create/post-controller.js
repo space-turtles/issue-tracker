@@ -2,12 +2,12 @@
 	'use strict';
   angular
     .module('issue-tracker.Create')
-    .controller('PostCtrl', ['$state', 'issuesService', Controller]);
+    .controller('PostController', ['$state', 'issuesService', Controller]);
 	 function Controller($state, issuesService) {
-		 var post = this; 
-		 post.addIssue = function(name, description){
+		 var vm = this; 
+		 vm.addIssue = function(name, description){
 	   issues.add(name, description);
-	   post.newIssue = ''; 
+	   vm.newIssue = ''; 
      };
 	 }
 }());
