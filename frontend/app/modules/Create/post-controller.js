@@ -2,8 +2,8 @@
 	'use strict';
   angular
     .module('issue-tracker.Create')
-    .controller('PostController', ['$state', 'issuesService', Controller]);
-	 function Controller($state, issuesService) {
+    .controller('PostController', ['$state', 'IssuesService', Controller]);
+	 function Controller($state, IssuesService) {
 		 var vm = this; 
 		 vm.addIssue = function(name, description){
 	   issues.add(name, description);
