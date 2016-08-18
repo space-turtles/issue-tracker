@@ -9,13 +9,13 @@
 		service.issuesList = []; 
 	  service.add = function (issue){
 		service.issuesList.push({id: service.issuesList.length, name: issue.name, description: issue.description});
-		service.makeCall = function() {
-      return $http.post(service.issuesList).then(function(response) {
-        return response;
+		};
+    
+    service.makeCall = function() {
+      return $http.post('/api/projects', service.issuesList).then(function(response) {
+        return response.data;
       });
     };
-		
-	  };
 	
 	}
 
