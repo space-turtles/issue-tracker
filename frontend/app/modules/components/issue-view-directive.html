@@ -1,6 +1,5 @@
 <div>
     <ul ng-repeat="project in vm.issues">
-        <h3>{{project.projectName}}</h3>
         <ul>
             <li ng-repeat="issue in project.issues">{{issue.issueName}}</li>
         </ul>
