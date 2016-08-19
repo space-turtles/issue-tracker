@@ -11,9 +11,18 @@
             vm.issues = [{
               'projectName': 'project',
               'issues': [
-                {"hasdf":true},
-                {"hello":true},
-                {"sadfwef":true}
+                {
+                  "issueName": "hasdf",
+                  "isOpen": true
+                },
+                {
+                  "issueName": "hello",
+                  "isOpen": true
+                },
+                {
+                  "issueName": "sadfwef",
+                  "isOpen": true
+                }
               ]
             }];
     
