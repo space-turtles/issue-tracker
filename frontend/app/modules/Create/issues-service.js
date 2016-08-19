@@ -11,7 +11,7 @@
 		service.issuesList.push({id: service.issuesList.length, name: issue.name, description: issue.description});
 		};
     
-    service.makeCall = function() {
+    service.createIssueCall = function() {
       return $http.post('/api/projects', service.issuesList).then(function(response) {
         return response.data;
       });

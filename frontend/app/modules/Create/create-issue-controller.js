@@ -2,7 +2,7 @@
   'use strict';
   angular
     .module('issue-tracker.Create')
-    .controller('PostController', ['$state', 'issues-service', Controller]);
+    .controller('CreateIssueController', ['$state', 'issues-service', Controller]);
 
   function Controller($state, IssuesService) {
       var vm = this; 
@@ -12,7 +12,7 @@
           'description':description
         }
         IssuesService.add(newIssue);
-        IssuesService.makeCall(); 
+        IssuesService.createIssueCall(); 
       };
   }
 }());

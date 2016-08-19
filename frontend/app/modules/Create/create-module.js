@@ -7,8 +7,8 @@
     function Routes($stateProvider) {
       $stateProvider.state('issue-tracker.CreateForm', {
           url: '/create',
-          templateUrl: 'create-form.html',
-          controller: 'PostController',
+          templateUrl: 'create-issue-form.html',
+          controller: 'CreateIssueController',
           controllerAs: 'vm'
       });
     }
