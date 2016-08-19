@@ -1,6 +1,6 @@
-<div ng-controller="viewController">
+<div>
     <ul ng-repeat="project in vm.issues">
-        <h3>{{project.name}}</h3>
+        <h3>{{project.projectName}}</h3>
         <ul>
             <li ng-repeat="issue in project.issues">{{issue}}</li>
         </ul>

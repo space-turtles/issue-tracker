@@ -6,20 +6,22 @@
     
   function Controller(ViewService) {
     var vm = this;
-
+    
+    /*vm.issues = [{
+      'projectName': 'project',
+      'issues': [{
+        "hasdf":true,
+        "hello":true,
+        "sadfwef":true
+      }]
+    }];
+    
+    console.log('issues', vm.issues);
     vm.loadProjectCall = function() {
       ViewService.makeCall().then(function(data) {
-        vm.issues = [];
-        for (var project in  data) {
-          for (var projectData in project){
-            vm.issues.push(projectData.issues);
-            console.log('current projectData:', projectData);
-          }
-        }
-        console.log('vm.issues', vm.issues);
-        console.log('the data', data);
+        console.log('data', data);
       });
     }
-    vm.loadProjectCall();
+    vm.loadProjectCall(); */
   };
 })();
