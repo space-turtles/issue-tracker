@@ -1,8 +1,8 @@
 (function() {
 	
 	angular
-    .module('issue-tracker.Create')
-    .service('issuesService', ['$http', Service]);
+    .module('issue-tracker.issues')
+    .service('IssuesService', ['$http', Service]);
 
   function Service($http) {
 		var service = this;

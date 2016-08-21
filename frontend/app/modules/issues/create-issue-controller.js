@@ -1,8 +1,8 @@
 (function(issues) {
   'use strict';
   angular
-    .module('issue-tracker.Create')
-    .controller('CreateIssueController', ['$state', 'issuesService', Controller]);
+    .module('issue-tracker.issues')
+    .controller('CreateIssueController', ['$state', 'IssuesService', Controller]);
 
   function Controller($state, IssuesService) {
       var vm = this; 
