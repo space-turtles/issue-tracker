@@ -30,10 +30,11 @@
             }];
         vm.loadProjectCall = function() {
           ViewService.makeCall().then(function(data) {
+            //Replace with for...in when data is workable
             console.log('data', data);
            });
           }
-          
+        // Testing data that is output  
         vm.loadProjectCall();
         } 
         
