@@ -1,6 +1,6 @@
 (function() {
     angular
-        .module('components')
+        .module('issue-tracker.issues')
         .service('ViewService', ['$http', Service]);
         
     function Service($http) {

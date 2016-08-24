@@ -2,7 +2,7 @@
     'use strict';
     
     angular
-        .module('components')
+        .module('issue-tracker.issues')
         .directive('issuesView', Directive);
         
     function Directive() {
