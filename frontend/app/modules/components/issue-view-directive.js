@@ -6,7 +6,7 @@
         .directive('issuesView', Directive);
         
     function Directive() {
-        function Controller() {
+        function Controller(ViewService) {
             var vm = this;
             vm.issues = [{
               'projectName': 'project',
@@ -28,19 +28,19 @@
                 }
               ]
             }];
-    
-        console.log('issues', vm.issues);
         vm.loadProjectCall = function() {
           ViewService.makeCall().then(function(data) {
             console.log('data', data);
            });
           }
-        }
+          
+        vm.loadProjectCall();
+        } 
         
         return {
           restrict: 'E',
           templateUrl: 'issue-view-directive.html',
-          controller: [Controller],
+          controller: ['ViewService', Controller],
           controllerAs: 'vm',
           bindToController: true
         };
