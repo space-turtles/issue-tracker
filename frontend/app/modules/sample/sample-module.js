@@ -16,5 +16,5 @@
           controller: 'SampleController',
           controllerAs: 'vm'
       });
-    };
+    }
 })();
