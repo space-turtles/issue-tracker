@@ -6,16 +6,16 @@
         .directive('issuesView', Directive);
         
     function Directive() {
-        function Controller(ViewService) {
-            var vm = this;
-        } 
+      function Controller(ViewService) {
+        var vm = this;
+      } 
         
-        return {
-          restrict: 'E',
-          templateUrl: 'issue-view-directive.html',
-          controller: [Controller],
-          controllerAs: 'vm',
-          bindToController: true
-        };
+      return {
+        restrict: 'E',
+        templateUrl: 'issue-view-directive.html',
+        controller: [Controller],
+        controllerAs: 'vm',
+        bindToController: true
+      };
     }
 })();

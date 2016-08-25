@@ -1,7 +1,5 @@
 <div>
-    <ul ng-repeat="project in vm.issues">
-        <ul>
-            <li ng-repeat="issue in project.issues">{{issue.issueName}}</li>
-        </ul>
-    </ul>
+  <ul ng-repeat="project in vm.issues">
+    <li ng-repeat="issue in project.issues">{{issue.issueName}}</li>
+  </ul>
 </div>
