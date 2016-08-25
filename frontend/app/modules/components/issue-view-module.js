@@ -6,8 +6,11 @@
       .config(['$stateProvider', Routes]);
       
       function Routes($stateProvider) {
-         $stateProvider.state('thing', {
-            url:
-         })
+         $stateProvider.state('issue-tracker.issues', {
+            url: '/issues',
+            templateUrl: 'issue-view-directive.html',
+            controller: 'IssueViewController',
+            controllerAs: 'vm'
+         });
       }
 })();
