@@ -13,7 +13,7 @@
         return {
           restrict: 'E',
           templateUrl: 'issue-view-directive.html',
-          controller: [IssueViewController],
+          controller: [Controller],
           controllerAs: 'vm',
           bindToController: true
         };
