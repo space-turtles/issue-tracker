@@ -5,10 +5,11 @@
 
   angular
     .module('issue-tracker',
-    [
+    [ 
         'ui.router',
         'issue-tracker.sample',
 				'issue-tracker.issues',
+        'issue-tracker.projects',
         'components'
     ])
     .constant('baseImagePath', '/images/')
