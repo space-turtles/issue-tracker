@@ -5,11 +5,16 @@
 
   angular
     .module('issue-tracker',
-    [
+    [ 
         'ui.router',
+<<<<<<< HEAD
         'issue-tracker.sample',
 				'issue-tracker.issues',
+        'issue-tracker.projects',
         'components'
+=======
+        'issue-tracker.projects'
+>>>>>>> 7c5ccede051beccdee79a4e497d2138fbe3ba9c8
     ])
     .constant('baseImagePath', '/images/')
     .constant('config', {apiHost: apiHost})
